@@ -2,6 +2,7 @@ const catchError = require('../utils/catchError');
 const Product = require('../models/Product');
 const Category = require('../models/Category');
 const Image = require('../models/Image');
+const { Op } = require('sequelize');
 
 const getAll = catchError(async(req, res) => {
     const { title, categoryId } = req.query;
